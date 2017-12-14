@@ -15,6 +15,13 @@ class LRUCache(object):
         self._size = 0
 
     def __str__(self):
+        """
+        Overrides default __str__ method and returns
+        a human readable format for our LRU data structure
+
+        U
+        :return:
+        """
         return "%s %s" % (self.lru.__str__(), self.cache.__str__())
 
     @property
@@ -42,14 +49,6 @@ class LRUCache(object):
         :return:
         """
         return self._lru
-
-    @property
-    def size(self):
-        """
-        Amount of keys currently in our storage
-        :return:
-        """
-        return self._size
 
     @capacity.setter
     def capacity(self, capacity):
@@ -104,8 +103,7 @@ class LRUCache(object):
         self.cache[key] = value
 
     def insert(self, key, value):
-        """ Inserts k/v pair into cache adds
-
+        """ Inserts k/v pair into cache and LRU queue
         :param key:
         :param value:
         :return:
@@ -114,20 +112,24 @@ class LRUCache(object):
         self.lru_insert(key)
 
     def cache_remove(self, key):
+        """Asserts a key is contained in our cache,
+        then removes it.
+        :param key:
+        :return:
+        """
         if self.contains(key):
             del self.cache[key]
 
     def cache_get(self, key):
-        """
-
+        """Wrapper for get from our python dictionary
         :param key:
         :return:
         """
         return self.cache[key]
 
     def renew(self, key):
-        """
-
+        """Our key has been recently used so put it back
+        at the front of our queue
         :param key:
         :return:
         """
@@ -135,11 +137,16 @@ class LRUCache(object):
         self.lru_insert(key)
 
     def update(self, key, value):
+        """Updates a given keys value
+        :param key:
+        :param value:
+        :return:
+        """
         self.cache_insert(key, value)
 
     def get(self, key):
-        """
-
+        """Given a key from the user checks if it is valid
+        and returns the value associated or -1
         :param key:
         :return:
         """
@@ -150,8 +157,7 @@ class LRUCache(object):
             return -1
 
     def put(self, key, value):
-        """
-
+        """ Inserts k,v pair into our hash
         :param key:
         :param value:
         :return:

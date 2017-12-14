@@ -1,6 +1,5 @@
 from unittest import TestCase
 import pylearn.leetcode as solution
-import pylearn.lru_cache as lru
 
 s = solution.Solution()
 
@@ -34,4 +33,3 @@ class TestSolution(TestCase):
 
     def test_generate_matrix(self):
         pass
-
