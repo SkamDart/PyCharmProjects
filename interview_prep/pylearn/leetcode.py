@@ -8,7 +8,7 @@ class Solution:
         :param matrix:
         :return:
         """
-        if matrix == []:
+        if not matrix:
             return []
 
         spiral = []
@@ -55,10 +55,6 @@ class Solution:
         return sqrt ** 2 == n
 
     def is_prime(self, n):
-        from math import sqrt
-
-        sqrt = int(sqrt(n))
-
         for i in range(3, n):
             if n % i == 0:
                 return False
@@ -225,6 +221,12 @@ class Solution:
                     for k in end:
                         ways.append(Solution.str_math(j, k, ci))
         return ways
+
+    def monotoneIncreasingDigits(self, N):
+        """
+        :type N: int
+        :rtype: int
+        """
 
 s = Solution()
 
