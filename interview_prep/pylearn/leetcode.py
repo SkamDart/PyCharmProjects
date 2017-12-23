@@ -1,4 +1,6 @@
 import sys
+from operator import mul, add, sub, truediv
+from collections import deque
 
 
 class Solution:
@@ -344,7 +346,36 @@ class Solution:
         return ''.join(num)
 
 
+
+    def evalRPN(self, tokens):
+        """
+        :type tokens: List[str]
+        :rtype
+        """
+        ops = {
+            '*': mul,
+            '+': add,
+            '-': sub,
+            '/': truediv
+        }
+
+        stack = deque()
+
+        for token in tokens:
+            if token in ops:
+                y = int(stack.pop())
+                x = int(stack.pop())
+                op = ops[token]
+                stack.append(op(x, y))
+            else:
+                stack.append(token)
+
+        return stack.pop()
+
 s = Solution()
+print(s.evalRPN(["2", "1", "+"]))
+assert s.evalRPN(["2", "1", "+", "3", "*"]) == 9
+assert s.evalRPN(["4", "13", "5", "/", "+"]) == 6
 """
 print(s.convertToTitle(1))
 print(s.convertToTitle(26))
