@@ -228,9 +228,133 @@ class Solution:
         :rtype: int
         """
 
-s = Solution()
+    def findTheDifference(self, s, t):
+        """
+        https://leetcode.com/problems/find-the-difference/description/
+        :type s: str
+        :type t: str
+        :rtype: str
+        """
+        from string import ascii_lowercase
+        from operator import mul
+        from functools import reduce
 
+        if s == '' or t == '':
+            return ''
+
+        primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101]
+        char_prime = { k: v for k, v in zip(ascii_lowercase, primes) }
+        prime_char = { k: v for k, v in zip(primes, ascii_lowercase) }
+
+        s_num = reduce(mul, list(map(lambda x: char_prime[x], s)), 1)
+        t_num = reduce(mul, list(map(lambda x: char_prime[x], t)), 1)
+
+        if t_num > s_num:
+            return prime_char[t_num / s_num]
+        else:
+            return prime_char[s_num / t_num]
+
+    def canConstruct(self, ransomNote, magazine):
+        """
+        :type ransomNote: str
+        :type magazine: str
+        :rtype: bool
+        """
+        from collections import Counter
+        ransom = Counter(ransomNote)
+        mag = Counter(magazine)
+
+        for letter in ransom:
+            if ransom.get(letter, 0) > mag.get(letter, -1):
+                return False
+
+        return True
+
+    def selfDividingNumbers(self, left, right):
+        """
+        :type left: int
+        :type right: int
+        :rtype: List[int]
+        """
+        nums = []
+        for i in range(left, right + 1):
+            if i % 10 == 0:
+                continue
+
+            should_add = True
+            num = str(i)
+
+            for digit in num:
+                if i % int(digit) != 0:
+                    should_add = False
+
+            if should_add:
+                nums.append(i)
+
+        return nums
+
+    def reversePairsI(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        pairs = 0
+        for i in range(len(nums)):
+            for j in range(i + 1, len(nums)):
+                if nums[i] > 2 * nums[j]:
+                    pairs += 1
+        return pairs
+
+    def findMaxAverage(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: float
+        """
+        from sys import maxsize
+        n = len(nums) - k + 1
+        greatest_average = -maxsize
+
+        for i in range(n):
+            greatest_average = max(float(sum(nums[i: i + k])) / k, greatest_average)
+
+        return greatest_average
+
+    def convertToTitle(self, n):
+        """
+        :type n: int
+        :rtype: str
+        """
+        from string import ascii_uppercase
+        from collections import deque
+
+        num_to_char = lambda x: ascii_uppercase[x - 1]
+        num = deque([])
+        ascii_len = len(ascii_uppercase)
+
+        while True:
+
+            if n <= ascii_len:
+                num.appendleft(num_to_char(n % ascii_len))
+                break
+
+            num.appendleft(num_to_char(n % ascii_len))
+            n //= ascii_len
+
+        return ''.join(num)
+
+
+s = Solution()
 """
+print(s.convertToTitle(1))
+print(s.convertToTitle(26))
+print(s.convertToTitle(28))
+print(s.convertToTitle(27))
+print(s.convertToTitle(56))
+print(s.findMaxAverage([1,12,-5,-6,50,3], 4))
+print(s.reversePairs([1,3,2,3,1]))
+print(s.reversePairs([2,4,3,5,1]))
+print(s.findTheDifference('abcde','bacd'))
 print(s.diffWaysToCompute("2-1"))
 print(s.diffWaysToCompute("2-1-1"))
 print(s.levelOrder([3,9,20,None,None,15,7]))

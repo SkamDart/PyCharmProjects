@@ -186,6 +186,12 @@ small.left.right = TreeNode(5)
 small.right.left = TreeNode(6)
 small.right.right = TreeNode(7)
 
+head = TreeNode(3)
+head.left = TreeNode(9)
+head.right = TreeNode(20)
+head.right.left = TreeNode(15)
+head.right.right = TreeNode(7)
+
 """
 print(t.levelOrder(small))
 t.averageOfLevels(small)
@@ -193,8 +199,3 @@ t.zigzagLevelOrder(head)
 t.zigzagLevelOrder(small)
 """
 
-head = TreeNode(3)
-head.left = TreeNode(9)
-head.right = TreeNode(20)
-head.right.left = TreeNode(15)
-head.right.right = TreeNode(7)
