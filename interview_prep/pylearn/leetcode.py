@@ -349,6 +349,7 @@ class Solution:
 
     def evalRPN(self, tokens):
         """
+        https://leetcode.com/problems/evaluate-reverse-polish-notation/
         :type tokens: List[str]
         :rtype
         """
@@ -372,11 +373,33 @@ class Solution:
 
         return stack.pop()
 
+    def findPeakElement(self, nums):
+        """
+        https://leetcode.com/problems/find-peak-element/description/
+        :type nums: List[int]
+        :rtype: int
+        """
+        from sys import maxsize
+        nums.append(-maxsize)
+        nums.insert(0, -maxsize)
+        n = len(nums)
+
+        for j in range(1, n - 1):
+            ni = nums[j - 1]
+            nj = nums[j]
+            nk = nums[j + 1]
+
+            if ni < nj and nj > nk:
+                return j - 1
+
+        return None
+
 s = Solution()
+print(s.findPeakElement([1, 2, 3, 1]))
+"""
 print(s.evalRPN(["2", "1", "+"]))
 assert s.evalRPN(["2", "1", "+", "3", "*"]) == 9
 assert s.evalRPN(["4", "13", "5", "/", "+"]) == 6
-"""
 print(s.convertToTitle(1))
 print(s.convertToTitle(26))
 print(s.convertToTitle(28))
@@ -396,4 +419,31 @@ k2 = ["KFC", "Shogun", "Burger King"]
 print(s.findRestaurant(l1, l2))
 print(s.findRestaurant(k1, k2))
 """
+
+
+class NumArray:
+    """
+    https://leetcode.com/problems/range-sum-query-mutable/description/
+    """
+    def __init__(self, nums):
+        """
+        :type nums: List[int]
+        """
+        self.vals = nums
+
+    def update(self, i, val):
+        """
+        :type i: int
+        :type val: int
+        :rtype: void
+        """
+        self.vals[i] = val
+
+    def sumRange(self, i, j):
+        """
+        :type i: int
+        :type j: int
+        :rtype: int
+        """
+        return sum(self.vals[i: j + 1])
 
