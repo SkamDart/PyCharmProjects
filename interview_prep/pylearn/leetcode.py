@@ -394,6 +394,13 @@ class Solution:
 
         return None
 
+    def findMode(self, root):
+        """
+        :type root: TreeNode
+        :rtype: List[int]
+        """
+        
+
 s = Solution()
 print(s.findPeakElement([1, 2, 3, 1]))
 """

@@ -177,12 +177,35 @@ class TreeNode:
 
         return levels
 
+    def findMode(self, root):
+        """
+        https://leetcode.com/problems/find-mode-in-binary-search-tree/description/
+        :type root: TreeNode
+        :rtype: List[int]
+        """
+        from collections import deque, Counter
+
+        q = deque([root])
+        values = []
+
+        while q:
+            cur = q.pop()
+            values.append(cur.val)
+            if cur.left is not None:
+                q.append(cur.left)
+            if cur.right is not None:
+                q.append(cur.right)
+
+        d = Counter(values)
+        max_mode = d.most_common(1)[0][1]
+        return [k for k in d if d[k] == max_mode]
+
 t = TreeNode(0)
 small = TreeNode(1)
 small.left = TreeNode(2)
 small.right = TreeNode(3)
-small.left.left = TreeNode(4)
-small.left.right = TreeNode(5)
+small.left.left = TreeNode(2)
+small.left.right = TreeNode(3)
 small.right.left = TreeNode(6)
 small.right.right = TreeNode(7)
 
@@ -192,6 +215,7 @@ head.right = TreeNode(20)
 head.right.left = TreeNode(15)
 head.right.right = TreeNode(7)
 
+print(t.findMode(small))
 """
 print(t.levelOrder(small))
 t.averageOfLevels(small)
