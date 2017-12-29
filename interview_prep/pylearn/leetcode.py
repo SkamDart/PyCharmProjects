@@ -1,9 +1,57 @@
 import sys
 from operator import mul, add, sub, truediv
 from collections import deque
+from pylearn.linkedlist import ListNode as ln
 
 
 class Solution:
+
+    def addTwoNumbers(self, l1, l2):
+        """
+        https://leetcode.com/problems/add-two-numbers/description/
+        :type l1: ListNode
+        :type l2: ListNode
+        :rtype: ListNode
+        """
+        from collections import deque
+        l1_iter = l1
+        l2_iter = l2
+        l1_val = deque([])
+        l2_val = deque([])
+
+        while True:
+
+            if l1_iter is None and l2_iter is None:
+                break
+
+            if l1_iter is not None:
+                l1_val.appendleft(str(l1_iter.val))
+                l1_iter = l1_iter.next
+
+            if l2_iter is not None:
+                l2_val.appendleft(str(l2_iter.val))
+                l2_iter = l2_iter.next
+
+        l1_val = int(''.join(l1_val))
+        l2_val = int(''.join(l2_val))
+
+        #print("{} + {} = {}".format(l1_val, l2_val, l1_val + l2_val))
+
+        sum_val = str(l1_val +  l2_val)[::-1]
+        head = None
+        cur = None
+
+        for digit in sum_val:
+
+            if head is None:
+                head = ListNode(int(digit))
+                cur = head
+                continue
+
+            cur.next = ListNode(int(digit))
+            cur = cur.next
+
+        return head
 
     def spiral_order(self, matrix):
         """
@@ -394,16 +442,16 @@ class Solution:
 
         return None
 
-    def findMode(self, root):
+    def updateMatrix(self, matrix):
         """
-        :type root: TreeNode
-        :rtype: List[int]
+        https://leetcode.com/problems/01-matrix/description/
+        :type matrix: List[List[int]]
+        :rtype: List[List[int]]
         """
-        
 
 s = Solution()
-print(s.findPeakElement([1, 2, 3, 1]))
 """
+print(s.findPeakElement([1, 2, 3, 1]))
 print(s.evalRPN(["2", "1", "+"]))
 assert s.evalRPN(["2", "1", "+", "3", "*"]) == 9
 assert s.evalRPN(["4", "13", "5", "/", "+"]) == 6
@@ -427,6 +475,10 @@ print(s.findRestaurant(l1, l2))
 print(s.findRestaurant(k1, k2))
 """
 
+class ListNode:
+    def __init__(self, x):
+        self.val = x
+        self.next = None
 
 class NumArray:
     """
@@ -453,4 +505,3 @@ class NumArray:
         :rtype: int
         """
         return sum(self.vals[i: j + 1])
-
