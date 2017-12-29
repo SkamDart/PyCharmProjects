@@ -18,3 +18,11 @@ class TestLeetCode(TestCase):
         two.next.next = ListNode(6)
 
         self.assertTrue(self.s.addTwoNumbers(one, two))
+
+    def test_romanToInt(self):
+        s = self.s.romanToInt
+        self.assertTrue(s('I') == 1)
+        self.assertTrue(s('II') == 2)
+        self.assertTrue(s('III') == 3)
+        self.assertTrue(s('IV') == 4)
+        self.assertTrue(s("DCXXI") == 621)
