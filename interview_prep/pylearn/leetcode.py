@@ -6,6 +6,14 @@ from pylearn.linkedlist import ListNode as ln
 
 class Solution:
 
+    def canWinNim(self, n):
+        """
+        https://leetcode.com/problems/nim-game/description/
+        :type n: int
+        :rtype: bool
+        """
+        return n % 4 != 0
+
     def romanToInt(self, s):
         """
         https://leetcode.com/problems/roman-to-integer/description/
