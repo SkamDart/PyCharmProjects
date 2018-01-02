@@ -7,7 +7,7 @@ class Graph(object):
 
     @property
     def adjacency_list(self):
-        return 
+        return self._adjacency_list
     
     @adjacency_list.setter
     def adjacency_list(self, value):

@@ -6,6 +6,68 @@ from pylearn.linkedlist import ListNode as ln
 
 class Solution:
 
+    def removeDuplicates(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        duplicates = 0
+        prev = None
+
+        for i, num in enumerate(nums):
+
+            if prev == num:
+                duplicates += 1
+
+            prev = num
+            nums[i - duplicates] = nums[i]
+
+        return len(nums) - duplicates
+
+    def plusOne(self, digits):
+        """
+        :type digits: List[int]
+        :rtype: List[int]
+        """
+        from collections import deque
+        new_sum = deque(digits)
+        new_sum[-1] += 1
+        carry_over = 0
+
+        for i, num in enumerate(reversed(new_sum)):
+            num += carry_over
+            if num >= 10:
+                num = num % 10
+
+        if new_sum[0] == 10:
+            new_sum[0] = 0
+            new_sum.appendleft(1)
+
+        print(new_sum)
+        return list(new_sum)
+
+    def addDigits(self, num):
+        """
+        https://leetcode.com/problems/add-digits/description/
+        :type num: int
+        :rtype: int
+        """
+        while True:
+            s = str(num)
+            if len(s) == num:
+                return num
+            else:
+                num = sum(list(num))
+
+    def findMedianSortedArrays(self, nums1, nums2):
+        """
+        https://leetcode.com/problems/median-of-two-sorted-arrays/description/
+        :type nums1: List[int]
+        :type nums2: List[int]
+        :rtype: float
+        """
+        pass
+
     def canWinNim(self, n):
         """
         https://leetcode.com/problems/nim-game/description/
