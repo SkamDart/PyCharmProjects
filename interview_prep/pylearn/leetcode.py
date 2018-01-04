@@ -5,6 +5,17 @@ from pylearn.linkedlist import ListNode as ln
 
 
 class Solution:
+
+    def reverseWords(self, s):
+        """
+        https://leetcode.com/problems/reverse-words-in-a-string/description/
+        :type s: str
+        :rtype: str
+        """
+        # remove whitespace
+        t = ' '.join(s.split())
+        return ''.join([word for word in t.split(" ")])
+
     def convert(self, s, numRows):
         """
         https://leetcode.com/problems/zigzag-conversion/
