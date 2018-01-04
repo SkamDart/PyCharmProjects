@@ -5,6 +5,27 @@ from pylearn.linkedlist import ListNode as ln
 
 
 class Solution:
+    def convert(self, s, numRows):
+        """
+        https://leetcode.com/problems/zigzag-conversion/
+        :type s: str
+        :type numRows: int
+        :rtype: str
+        """
+        if len(s) <= numRows or numRows == 1:
+            return s
+
+        row_format = [ [c] for c in s[:numRows]]
+        magic = 2 * (numRows - 1)
+
+        for i, c in enumerate(s[numRows:], numRows):
+            mod_magic = i % magic
+            if mod_magic < numRows:
+                row_format[i % magic].append(c)
+            else:
+                row_format[magic - mod_magic].append(c)
+
+        return ''.join(map(''.join, row_format))
 
     def removeDuplicates(self, nums):
         """
