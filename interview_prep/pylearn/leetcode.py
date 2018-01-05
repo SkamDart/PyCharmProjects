@@ -14,7 +14,7 @@ class Solution:
         """
         # remove whitespace
         t = ' '.join(s.split())
-        return ''.join([word for word in t.split(" ")])
+        return ' '.join([word for word in t.split(" ")][::-1])
 
     def convert(self, s, numRows):
         """

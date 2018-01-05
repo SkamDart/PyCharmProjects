@@ -3,10 +3,23 @@ from pylearn.leetcode import Solution
 from pylearn.leetcode import ListNode
 import pylearn.linkedlist as ll
 
+
 class TestLeetCode(TestCase):
 
     def setUp(self):
         self.s = Solution()
+
+    def test_Convert(self):
+        convert = self.s.convert
+        self.assertTrue(convert("PAYPALISHIRING", 3) == "PAHNAPLSIIGYIR")
+        self.assertTrue(convert("PAYPALISHIRING", 4) == "PINALSIGYAHRPI")
+
+    def test_plusOne(self):
+        plusOne = self.s.plusOne
+        plusOne([1,0,0])
+        plusOne([0])
+        plusOne([9])
+        plusOne([1, 0, 0, 9])
 
     def test_addTwoNumbers(self):
         one = ListNode(1)
@@ -26,3 +39,10 @@ class TestLeetCode(TestCase):
         self.assertTrue(s('III') == 3)
         self.assertTrue(s('IV') == 4)
         self.assertTrue(s("DCXXI") == 621)
+
+    def test_addDigits(self):
+        s = self.s.addDigits
+
+        for i in range(100):
+            print(s(i))
+
