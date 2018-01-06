@@ -9,6 +9,17 @@ class TestLeetCode(TestCase):
     def setUp(self):
         self.s = Solution()
 
+    def test_getSum(self):
+        s = self.s.getSum
+        self.assertTrue(s(2, 3) == 5)
+
+    def test_isValid(self):
+        isValid = self.s.isValid
+        self.assertFalse(isValid("("))
+        self.assertTrue(isValid("()"))
+        self.assertFalse(isValid("(]"))
+        self.assertTrue(isValid("()[]{}"))
+
     def test_Convert(self):
         convert = self.s.convert
         self.assertTrue(convert("PAYPALISHIRING", 3) == "PAHNAPLSIIGYIR")

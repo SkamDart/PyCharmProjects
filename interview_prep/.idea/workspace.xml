@@ -20,6 +20,7 @@
     <SUITE FILE_PATH="coverage/interview_prep$test.coverage" NAME="test Coverage Results" MODIFIED="1514420258244" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pylearn" />
     <SUITE FILE_PATH="coverage/interview_prep$Unittests_for_test_solution_TestSolution_test_lru_medium.coverage" NAME="Unittests for test_solution.TestSolution.test_lru_medium Coverage Results" MODIFIED="1511409171133" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pylearn" />
     <SUITE FILE_PATH="coverage/interview_prep$Unittests_for_leetcode_TestLeetCode_test_romanToInt.coverage" NAME="Unittests for leetcode.TestLeetCode.test_romanToInt Coverage Results" MODIFIED="1514583512150" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/interview_prep$Unittests_for_leetcode_TestLeetCode_test_isValid.coverage" NAME="Unittests for leetcode.TestLeetCode.test_isValid Coverage Results" MODIFIED="1515266337852" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/interview_prep$Unittests_for_LRUTest_TestLRUCache.coverage" NAME="Unittests for LRUTest.TestLRUCache Coverage Results" MODIFIED="1511564874500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/interview_prep$rob.coverage" NAME="rob Coverage Results" MODIFIED="1514002752145" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pylearn" />
     <SUITE FILE_PATH="coverage/interview_prep$Unittests_for_leetcode_TestLeetCode_test_addTwoNumbers.coverage" NAME="Unittests for leetcode.TestLeetCode.test_addTwoNumbers Coverage Results" MODIFIED="1514516813332" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
@@ -35,6 +36,7 @@
     <SUITE FILE_PATH="coverage/interview_prep$Unittests_for_test_solution_TestSolution_test_lru_simple.coverage" NAME="Unittests for test_solution.TestSolution.test_lru_simple Coverage Results" MODIFIED="1511409164810" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pylearn" />
     <SUITE FILE_PATH="coverage/interview_prep$Unittests_for_other_tests_OtherTests_test_subarraySum.coverage" NAME="Unittests for other_tests.OtherTests.test_subarraySum Coverage Results" MODIFIED="1511921269622" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/interview_prep$Unittests_for_other_tests_OtherTests_test_perfect_squares.coverage" NAME="Unittests for other_tests.OtherTests.test_perfect_squares Coverage Results" MODIFIED="1511575031663" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/interview_prep$Unittests_for_leetcode_TestLeetCode_test_getSum.coverage" NAME="Unittests for leetcode.TestLeetCode.test_getSum Coverage Results" MODIFIED="1515277284885" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/interview_prep$Unittests_in_akuna_py.coverage" NAME="Unittests in akuna.py Coverage Results" MODIFIED="1515186919065" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
   </component>
   <component name="FavoritesManager">
@@ -47,8 +49,8 @@
           <file leaf-file-name="leetcode.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/pylearn/leetcode.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="150">
-                  <caret line="10" column="68" lean-forward="false" selection-start-line="10" selection-start-column="68" selection-end-line="10" selection-end-column="68" />
+                <state relative-caret-position="104">
+                  <caret line="10" column="87" lean-forward="false" selection-start-line="10" selection-start-column="87" selection-end-line="10" selection-end-column="87" />
                   <folding>
                     <element signature="e#0#10#0" expanded="true" />
                   </folding>
@@ -60,11 +62,11 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="leetcode.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="leetcode.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/tests/leetcode.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="165">
-                  <caret line="14" column="50" lean-forward="false" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
+                <state relative-caret-position="102">
+                  <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
                   <folding>
                     <element signature="e#0#29#0" expanded="true" />
                   </folding>
@@ -84,7 +86,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="akuna.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="akuna.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/tests/akuna.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="101">
@@ -140,10 +142,10 @@
         <option value="$PROJECT_DIR$/tests/google.py" />
         <option value="$PROJECT_DIR$/pylearn/google.py" />
         <option value="$PROJECT_DIR$/pylearn/pycaster.py" />
-        <option value="$PROJECT_DIR$/tests/leetcode.py" />
         <option value="$PROJECT_DIR$/pycaster/company/akuna.py" />
         <option value="$PROJECT_DIR$/tests/akuna.py" />
         <option value="$PROJECT_DIR$/company/akuna.py" />
+        <option value="$PROJECT_DIR$/tests/leetcode.py" />
         <option value="$PROJECT_DIR$/pylearn/leetcode.py" />
       </list>
     </option>
@@ -228,7 +230,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in akuna.py">
+  <component name="RunManager" selected="Python tests.Unittests for leetcode.TestLeetCode.test_getSum">
     <configuration name="Unittests for google.TestGoogle.testPlusOne" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -242,21 +244,6 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;google.TestGoogle.testPlusOne&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-    </configuration>
-    <configuration name="Unittests for google.TestGoogle.testSpiral" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="interview_prep" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;google.TestGoogle.testSpiral&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
     <configuration name="Unittests for leetcode.TestLeetCode.test_Convert" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
@@ -274,7 +261,7 @@
       <option name="_new_target" value="&quot;leetcode.TestLeetCode.test_Convert&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
-    <configuration name="Unittests for leetcode.TestLeetCode.test_plusOne" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for leetcode.TestLeetCode.test_getSum" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -286,7 +273,22 @@
       <module name="interview_prep" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;leetcode.TestLeetCode.test_plusOne&quot;" />
+      <option name="_new_target" value="&quot;leetcode.TestLeetCode.test_getSum&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+    </configuration>
+    <configuration name="Unittests for leetcode.TestLeetCode.test_isValid" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="interview_prep" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;leetcode.TestLeetCode.test_isValid&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
     <configuration name="Unittests in akuna.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
@@ -446,19 +448,19 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests for leetcode.TestLeetCode.test_plusOne" />
-      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests for google.TestGoogle.testSpiral" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests for google.TestGoogle.testPlusOne" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests for leetcode.TestLeetCode.test_Convert" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in akuna.py" />
+      <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests for google.TestGoogle.testPlusOne" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests for leetcode.TestLeetCode.test_Convert" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in akuna.py" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests for leetcode.TestLeetCode.test_isValid" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests for leetcode.TestLeetCode.test_getSum" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in akuna.py" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests for leetcode.TestLeetCode.test_Convert" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests for google.TestGoogle.testPlusOne" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests for google.TestGoogle.testSpiral" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests for leetcode.TestLeetCode.test_plusOne" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests for leetcode.TestLeetCode.test_getSum" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests for leetcode.TestLeetCode.test_isValid" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in akuna.py" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests for leetcode.TestLeetCode.test_Convert" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests for google.TestGoogle.testPlusOne" />
       </list>
     </recent_temporary>
   </component>
@@ -476,32 +478,32 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_akuna_py - 2018.01.05 at 14h 55m 44s.xml">
-      <configuration name="Unittests in akuna.py" configurationId="tests" />
+    <history-entry file="Unittests_for_leetcode_TestLeetCode_test_getSum - 2018.01.06 at 16h 05m 53s.xml">
+      <configuration name="Unittests for leetcode.TestLeetCode.test_getSum" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_akuna_py - 2018.01.05 at 14h 56m 55s.xml">
-      <configuration name="Unittests in akuna.py" configurationId="tests" />
+    <history-entry file="Unittests_for_leetcode_TestLeetCode_test_getSum - 2018.01.06 at 16h 06m 37s.xml">
+      <configuration name="Unittests for leetcode.TestLeetCode.test_getSum" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_akuna_py - 2018.01.05 at 14h 58m 56s.xml">
-      <configuration name="Unittests in akuna.py" configurationId="tests" />
+    <history-entry file="Unittests_for_leetcode_TestLeetCode_test_getSum - 2018.01.06 at 16h 07m 42s.xml">
+      <configuration name="Unittests for leetcode.TestLeetCode.test_getSum" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_akuna_py - 2018.01.05 at 14h 59m 11s.xml">
-      <configuration name="Unittests in akuna.py" configurationId="tests" />
+    <history-entry file="Unittests_for_leetcode_TestLeetCode_test_getSum - 2018.01.06 at 16h 21m 23s.xml">
+      <configuration name="Unittests for leetcode.TestLeetCode.test_getSum" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_akuna_py - 2018.01.05 at 14h 59m 57s.xml">
-      <configuration name="Unittests in akuna.py" configurationId="tests" />
+    <history-entry file="Unittests_for_leetcode_TestLeetCode_test_getSum - 2018.01.06 at 16h 21m 25s.xml">
+      <configuration name="Unittests for leetcode.TestLeetCode.test_getSum" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_akuna_py - 2018.01.05 at 15h 00m 32s.xml">
-      <configuration name="Unittests in akuna.py" configurationId="tests" />
+    <history-entry file="Unittests_for_leetcode_TestLeetCode_test_isValid - 2018.01.06 at 13h 13m 21s.xml">
+      <configuration name="Unittests for leetcode.TestLeetCode.test_isValid" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_akuna_py - 2018.01.05 at 15h 12m 19s.xml">
-      <configuration name="Unittests in akuna.py" configurationId="tests" />
+    <history-entry file="Unittests_for_leetcode_TestLeetCode_test_isValid - 2018.01.06 at 13h 16m 06s.xml">
+      <configuration name="Unittests for leetcode.TestLeetCode.test_isValid" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_akuna_py - 2018.01.05 at 15h 12m 59s.xml">
-      <configuration name="Unittests in akuna.py" configurationId="tests" />
+    <history-entry file="Unittests_for_leetcode_TestLeetCode_test_isValid - 2018.01.06 at 13h 16m 18s.xml">
+      <configuration name="Unittests for leetcode.TestLeetCode.test_isValid" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_akuna_py - 2018.01.05 at 15h 13m 19s.xml">
-      <configuration name="Unittests in akuna.py" configurationId="tests" />
+    <history-entry file="Unittests_for_leetcode_TestLeetCode_test_isValid - 2018.01.06 at 13h 18m 58s.xml">
+      <configuration name="Unittests for leetcode.TestLeetCode.test_isValid" configurationId="tests" />
     </history-entry>
     <history-entry file="Unittests_in_akuna_py - 2018.01.05 at 15h 15m 19s.xml">
       <configuration name="Unittests in akuna.py" configurationId="tests" />
@@ -525,7 +527,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.232" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.232" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20133333" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -885,16 +887,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/leetcode.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="14" column="50" lean-forward="false" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/google.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -923,10 +915,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests/leetcode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pylearn/leetcode.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="68" lean-forward="false" selection-start-line="10" selection-start-column="68" selection-end-line="10" selection-end-column="68" />
+        <state relative-caret-position="104">
+          <caret line="10" column="87" lean-forward="false" selection-start-line="10" selection-start-column="87" selection-end-line="10" selection-end-column="87" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>

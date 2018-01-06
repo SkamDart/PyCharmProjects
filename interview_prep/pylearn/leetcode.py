@@ -6,6 +6,81 @@ from pylearn.linkedlist import ListNode as ln
 
 class Solution:
 
+    def letterCombinations(self, digits):
+        """
+        https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/
+        :type digits: str
+        :rtype: List[str]
+        """
+        mapping = {
+            2: 'abc',
+            3: 'def',
+            4: 'ghi',
+            5: 'jkl',
+            6: 'mno',
+            7: 'pqrs',
+            8: 'tuv',
+            9: 'wxyz'
+        }
+
+    def hammingWeight(self, n):
+        """
+        https://leetcode.com/problems/number-of-1-bits/description/
+        :type n: int
+        :rtype: int
+        """
+        return bin(n)[2:].count('1')
+
+    def getSum(self, a, b):
+        """
+        https://leetcode.com/problems/sum-of-two-integers/description/
+        :type a: int
+        :type b: int
+        :rtype: int
+        """
+        s = a
+
+        while b:
+            s = a ^ b
+            b = (a & b) << 1
+            a = s
+        return s
+
+    def isValid(self, s):
+        """
+        https://leetcode.com/problems/valid-parentheses/description/
+        :type s: str
+        :rtype: bool
+        """
+        from collections import deque
+
+        stack = deque()
+        left = {'(', '{', '['}
+
+        for char in s:
+            if char in left:
+                stack.append(char)
+                continue
+
+            if len(stack) == 0:
+                return False
+
+            delimiter = stack.pop()
+            if not self.is_matching_delimiter(delimiter, char):
+                return False
+
+        return len(stack) == 0
+
+    def is_matching_delimiter(self, s, t):
+        if s == '(' and t == ')':
+            return True
+        elif s == '{' and t == '}':
+            return True
+        elif s == '[' and t == ']':
+            return True
+        else:
+            return False
+
     def invertTree(self, root):
         """
         https://leetcode.com/problems/invert-binary-tree/description/
