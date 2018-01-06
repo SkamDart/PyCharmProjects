@@ -6,6 +6,19 @@ from pylearn.linkedlist import ListNode as ln
 
 class Solution:
 
+    def invertTree(self, root):
+        """
+        https://leetcode.com/problems/invert-binary-tree/description/
+        :type root: TreeNode
+        :rtype: TreeNode
+        """
+        if root is None:
+            return
+        root.left, root.right = root.right, root.left
+        self.invertTree(root.left)
+        self.invertTree(root.right)
+        return root
+
     def reverseWords(self, s):
         """
         https://leetcode.com/problems/reverse-words-in-a-string/description/

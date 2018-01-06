@@ -72,7 +72,6 @@ class MapSum(object):
             node = node.children[char]
         return node.value
 
-
 class NaieveMapSum(object):
 
     def __init__(self):
