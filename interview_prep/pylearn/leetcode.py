@@ -23,6 +23,16 @@ class Solution:
             9: 'wxyz'
         }
 
+        words = [[char for char in mapping[digits[0]]]]
+        for digit in digits:
+            chars = mapping[digit]
+            for char in chars:
+                words.append(char)
+
+        for word in words:
+            word = ''.join(word)
+
+
     def hammingWeight(self, n):
         """
         https://leetcode.com/problems/number-of-1-bits/description/

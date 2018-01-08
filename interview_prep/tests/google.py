@@ -1,5 +1,6 @@
 from unittest import TestCase
-from pylearn.google import Solution
+
+from company.google import Solution
 
 
 class TestGoogle(TestCase):
