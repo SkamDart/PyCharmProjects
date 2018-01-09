@@ -6,6 +6,21 @@ from pylearn.linkedlist import ListNode as ln
 
 class Solution:
 
+    def maxSubarray(self, nums):
+        """
+        https://leetcode.com/problems/maximum-subarray/description/
+        :type nums: List[int]
+        :rtype: int
+        """
+        from sys import maxsize
+        max_ = -maxsize
+        max_here = 0
+        for num in nums:
+            max_here += num
+            max_here = max(max_here, num)
+            max_ = max(max_, max_here)
+        return max_ if max_ >= 0 else max(nums)
+
     def rotate(self, nums, k):
         """
         https://leetcode.com/problems/rotate-array/description/
