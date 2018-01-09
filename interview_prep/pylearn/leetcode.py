@@ -6,6 +6,17 @@ from pylearn.linkedlist import ListNode as ln
 
 class Solution:
 
+    def rotate(self, nums, k):
+        """
+        https://leetcode.com/problems/rotate-array/description/
+        :type nums: List[int]
+        :type k: int
+        :rtype: void Do not return anything, modify nums in-place instead.
+        """
+        for i in range(k):
+            val = nums.pop(0)
+            nums.append(val)
+
     def letterCombinations(self, digits):
         """
         https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/
