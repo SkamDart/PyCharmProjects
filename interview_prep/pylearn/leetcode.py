@@ -5,6 +5,13 @@ from pylearn.linkedlist import ListNode as ln
 
 
 class Solution:
+    def majorityElement(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        from collections import Counter
+        return Counter(nums).most_common(1)[0][0]
 
     def maxSubarray(self, nums):
         """

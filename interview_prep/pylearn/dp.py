@@ -156,8 +156,8 @@ class Solution:
 
 
 
-if __name__ == '__main__':
-    s = Solution()
+#if __name__ == '__main__':
+#    s = Solution()
     """
     empty = []
     empty_soln = 0
@@ -175,4 +175,16 @@ if __name__ == '__main__':
     cost = [10, 15, 20]
     print(s.minCostClimbingStairs(cost))
     """
-    print(s.maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4], 0))
+    #print(s.maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4], 0))
+
+nums = [-2,1,-3,4,-1,2,1,-5,4]
+
+max_ = 0
+max_here = 0
+
+for num in nums:
+    max_here = num + max_here
+    max_here = max(max_here, num)
+    max_ = max(max_here, max_)
+
+print(max_)
