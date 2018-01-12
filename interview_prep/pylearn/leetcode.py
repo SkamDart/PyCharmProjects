@@ -1,10 +1,55 @@
 import sys
 from operator import mul, add, sub, truediv
 from collections import deque
-from pylearn.linkedlist import ListNode as ln
 
 
 class Solution:
+    def removeElement(self, nums, val):
+        """
+        https://leetcode.com/problems/remove-element/description/
+        :type nums: List[int]
+        :type val: int
+        :rtype: int
+        """
+        not_dupes = 0
+        for i, num in enumerate(nums):
+            if num != val:
+                nums[not_dupes] = nums[i]
+                not_dupes += 1
+        return not_dupes
+
+    def lengthOfLIS(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        pass
+
+    def lowestCommonAncestor(self, root, p, q):
+        """
+        :type root: TreeNode
+        :type p: TreeNode
+        :type q: TreeNode
+        :rtype: TreeNode
+        """
+        p_path = self.find_path(root, p, [])
+        q_path = self.find_path(root, q, [])
+        last_same = root
+
+        node_idx_map = {}
+        for i, node in enumerate(p_path):
+            node_idx_map[repr(node)] == i
+
+        return last_same
+
+    def find_path(self, root, p, path):
+        if root == p:
+            return path
+
+        if root.left == None and root.left == None:
+            return None
+
+
     def majorityElement(self, nums):
         """
         :type nums: List[int]
@@ -749,7 +794,8 @@ k2 = ["KFC", "Shogun", "Burger King"]
 print(s.findRestaurant(l1, l2))
 print(s.findRestaurant(k1, k2))
 """
-
+s.removeElement([3,2,2,3], 3)
+s.removeElement([3, 3], 3)
 class ListNode:
     def __init__(self, x):
         self.val = x
