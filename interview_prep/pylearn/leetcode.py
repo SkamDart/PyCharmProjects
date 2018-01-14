@@ -2,8 +2,32 @@ import sys
 from operator import mul, add, sub, truediv
 from collections import deque
 
+def print_matrix(matrix):
+    for row in matrix:
+        print(row)
+    print("")
 
 class Solution:
+    def lengthOfLIS(self, nums):
+        """
+        https://leetcode.com/problems/longest-increasing-subsequence/description/
+        :type nums: List[int]
+        :rtype: int
+        """
+        if nums == []:
+            return 0
+        if len(nums) == 1:
+            return 1
+        nums.insert(0, -sys.maxsize)
+        n = len(nums)
+        LIS = [0 for i in range(n)]
+        for i in range(n - 1, -1, -1):
+            LIS[i] = 1
+            for j in range(i + 1, n):
+                if nums[j] > nums[i] and 1 + LIS[j] > LIS[i]:
+                    LIS[i] = 1 + LIS[j]
+        return LIS[0] - 1
+
     def isSameTree(self, p, q):
         """
         https://leetcode.com/problems/same-tree/description/
@@ -52,13 +76,6 @@ class Solution:
                 nums[not_dupes] = nums[i]
                 not_dupes += 1
         return not_dupes
-
-    def lengthOfLIS(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
-        pass
 
     def lowestCommonAncestor(self, root, p, q):
         """
@@ -778,7 +795,7 @@ class Solution:
         """
 
 s = Solution()
-print(s.letterCombinations("23"))
+print(s.lengthOfLIS([-2, -1]))
 
 class ListNode:
     def __init__(self, x):
