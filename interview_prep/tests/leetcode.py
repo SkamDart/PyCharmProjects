@@ -57,3 +57,9 @@ class TestLeetCode(TestCase):
         for i in range(100):
             print(s(i))
 
+    def test_lengthOfLIS(self):
+        easy = [10, 9, 2, 5, 3, 7, 101, 18]
+        s = self.s.lengthofLIS
+
+        print(s(easy))
+

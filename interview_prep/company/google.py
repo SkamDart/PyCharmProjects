@@ -1,6 +1,30 @@
-
+"""
+"""
 
 class Solution:
+
+    def repeatedStringMatch(self, A, B):
+        """
+        :type A: str
+        :type B: str
+        :rtype: int
+        """
+        C = ''
+        reps = 0
+        while len(C) < 2 * len(A) + len(B):
+          if B in C:
+            return reps
+          reps += 1
+          C += A
+        return -1
+        
+    def kEmptySlots(self, flowers, k):
+        """
+        :type flowers: List[int]
+        :type k: int
+        :rtype: int
+        """
+        pass
 
     def mergeKLists(self, lists):
         """
@@ -159,5 +183,6 @@ class Solution:
 
 if __name__ == '__main__':
     s = Solution()
-    print(s.licenseKeyFormatting("5F3Z-2e-9-w", 4))
-    print(s.licenseKeyFormatting("2-5g-3-J", 2))
+    # print(s.licenseKeyFormatting("5F3Z-2e-9-w", 4))
+    # print(s.licenseKeyFormatting("2-5g-3-J", 2))
+    print(s.repeatedStringMatch("abcd", "cdabcdab"))
