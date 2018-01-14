@@ -4,6 +4,30 @@ from collections import deque
 
 
 class Solution:
+    def mergeTrees(self, t1, t2):
+        """
+        https://leetcode.com/problems/merge-two-binary-trees/description/
+        :type t1: TreeNode
+        :type t2: TreeNode
+        :rtype: TreeNode
+        """
+        if t1 and t2:
+            root_val = (t1.val if t1 else 0) + (t2.val if t2 else 0)
+            root = TreeNode(root_val)
+            root.left = self.mergeTrees(t1.left, t2.left)
+            root.right = self.mergeTrees(t1.right , t2.right)
+            return root
+        return t1 or t2
+        
+    def letterCombinations(self, digits):
+        """
+        :type digits: str
+        :rtype: List[str]
+        """
+        pass
+
+
+
     def removeElement(self, nums, val):
         """
         https://leetcode.com/problems/remove-element/description/
@@ -83,33 +107,6 @@ class Solution:
         for i in range(k):
             val = nums.pop(0)
             nums.append(val)
-
-    def letterCombinations(self, digits):
-        """
-        https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/
-        :type digits: str
-        :rtype: List[str]
-        """
-        mapping = {
-            2: 'abc',
-            3: 'def',
-            4: 'ghi',
-            5: 'jkl',
-            6: 'mno',
-            7: 'pqrs',
-            8: 'tuv',
-            9: 'wxyz'
-        }
-
-        words = [[char for char in mapping[digits[0]]]]
-        for digit in digits:
-            chars = mapping[digit]
-            for char in chars:
-                words.append(char)
-
-        for word in words:
-            word = ''.join(word)
-
 
     def hammingWeight(self, n):
         """
@@ -770,32 +767,8 @@ class Solution:
         """
 
 s = Solution()
-"""
-print(s.findPeakElement([1, 2, 3, 1]))
-print(s.evalRPN(["2", "1", "+"]))
-assert s.evalRPN(["2", "1", "+", "3", "*"]) == 9
-assert s.evalRPN(["4", "13", "5", "/", "+"]) == 6
-print(s.convertToTitle(1))
-print(s.convertToTitle(26))
-print(s.convertToTitle(28))
-print(s.convertToTitle(27))
-print(s.convertToTitle(56))
-print(s.findMaxAverage([1,12,-5,-6,50,3], 4))
-print(s.reversePairs([1,3,2,3,1]))
-print(s.reversePairs([2,4,3,5,1]))
-print(s.findTheDifference('abcde','bacd'))
-print(s.diffWaysToCompute("2-1"))
-print(s.diffWaysToCompute("2-1-1"))
-print(s.levelOrder([3,9,20,None,None,15,7]))
-l1 = ["Shogun","Tapioca Express","Burger King","KFC"]
-l2 = ["Piatti","The Grill at Torrey Pines","Hungry Hunter Steakhouse","Shogun"]
-k1 = ["Shogun", "Tapioca Express", "Burger King", "KFC"]
-k2 = ["KFC", "Shogun", "Burger King"]
-print(s.findRestaurant(l1, l2))
-print(s.findRestaurant(k1, k2))
-"""
-s.removeElement([3,2,2,3], 3)
-s.removeElement([3, 3], 3)
+print(s.letterCombinations("23"))
+
 class ListNode:
     def __init__(self, x):
         self.val = x
