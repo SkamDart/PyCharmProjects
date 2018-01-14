@@ -4,6 +4,17 @@ from collections import deque
 
 
 class Solution:
+    def isSameTree(self, p, q):
+        """
+        https://leetcode.com/problems/same-tree/description/
+        :type p: TreeNode
+        :type q: TreeNode
+        :rtype: bool
+        """
+        if p and q:
+            return p.val == q.val and self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right)
+        return p is q
+
     def mergeTrees(self, t1, t2):
         """
         https://leetcode.com/problems/merge-two-binary-trees/description/
@@ -18,7 +29,7 @@ class Solution:
             root.right = self.mergeTrees(t1.right , t2.right)
             return root
         return t1 or t2
-        
+
     def letterCombinations(self, digits):
         """
         :type digits: str
