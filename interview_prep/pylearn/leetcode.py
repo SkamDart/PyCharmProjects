@@ -8,6 +8,36 @@ def print_matrix(matrix):
     print("")
 
 class Solution:
+    def climbStairs(self, n):
+        """
+        https://leetcode.com/problems/climbing-stairs/description/
+        :type n: int
+        :rtype: int
+        0 -> 0
+        1 -> 1 (1 step)
+        2 -> 2 (1 + 1 step or 2 step)
+        3 -> 3 (1 + 1 + 1 step, 1 + 2 step, or 2 + 1 step)
+        
+        4 ->   (1 + 1 + 1 + 1   step 
+                2 + 1 + 1       step
+                1 + 2 + 1       step
+                1 + 1 + 2       step
+                2 + 2           step)
+
+        5 -> 4 + 1
+             1 + 4
+             1 + 1 + 1 + 1 + 1
+        """
+        if n < 3:
+            return n
+        N = n + 1
+        steps = [0 for i in range(N)]
+        steps[1] = 1
+        steps[2] = 2
+        for i in range(3, N):
+            steps[i] = steps[i - 1] + steps[i - 2]
+        return steps[n]
+
     def lengthOfLIS(self, nums):
         """
         https://leetcode.com/problems/longest-increasing-subsequence/description/
@@ -60,8 +90,6 @@ class Solution:
         :rtype: List[str]
         """
         pass
-
-
 
     def removeElement(self, nums, val):
         """
@@ -795,7 +823,7 @@ class Solution:
         """
 
 s = Solution()
-print(s.lengthOfLIS([-2, -1]))
+print(s.climbStairs(5))
 
 class ListNode:
     def __init__(self, x):
