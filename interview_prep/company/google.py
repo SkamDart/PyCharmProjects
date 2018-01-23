@@ -180,9 +180,53 @@ class Solution:
 
         return '-'.join(keys)
 
+from collections import deque
+class MovingAverage(object):
+
+    def __init__(self, size):
+        self._capacity = size
+        self._data = deque([])
+        self._total = 0
+        self._size = 0
+
+    @property
+    def capacity(self):
+        return self._capacity
+
+    @capacity.setter
+    def capacity(self, new_capacity):
+        self._capacity = new_capacity
+
+    @property
+    def size(self):
+        return self._size
+
+    @size.setter
+    def size(self, new_size):
+        self._size = new_size
+
+    @property
+    def total(self):
+        return self._total
+
+    @total.setter
+    def total(self, new_total):
+        self._total = new_total
+
+    def next(self, val):
+        if self.size == self.capacity:
+            # evict oldest value
+            evicted_value = self._data.pop()
+            # subtract that value from total
+            self.total -= evicted_value
+        else:
+            # increase size
+            self.size += 1
+
+        self.total += val
+        self._data.appendleft(val)
+        return self.total / self.size
 
 if __name__ == '__main__':
     s = Solution()
-    # print(s.licenseKeyFormatting("5F3Z-2e-9-w", 4))
-    # print(s.licenseKeyFormatting("2-5g-3-J", 2))
-    print(s.repeatedStringMatch("abcd", "cdabcdab"))
+    m = MovingAverage(3)
