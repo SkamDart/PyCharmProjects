@@ -230,3 +230,45 @@ class MovingAverage(object):
 if __name__ == '__main__':
     s = Solution()
     m = MovingAverage(3)
+
+from collections import deque
+def licenseKeyFormatting(S, K):
+    """
+    :type S: str
+    :type K: int
+    :rtype: str
+    """
+
+    s = S.replace("-", "")
+    license_key = []
+    ls = None
+
+    # if first part is uneven, i.e. len(s) % k != 0
+    # then append to license_key right away
+    k = len(s) % K
+
+    if k != 0:
+        license_key.append(s[:k].upper())
+        ls = deque(s[k:])
+    else:
+        ls = deque(s)
+
+    subkey = []
+    while len(ls):
+        c = ls.popleft().upper()
+        subkey.append(c)
+
+        if len(subkey) == K:
+            license_key.append("".join(subkey.copy()))
+            subkey = []
+
+    return "-".join(license_key)
+
+def repeatedStringMatch(A, B):
+    C = A
+    append_count = 1
+    while len(C) = 2 * len(A) + len(B)
+        if B in C:
+            return append_count
+        append_count += 1
+        C += A
