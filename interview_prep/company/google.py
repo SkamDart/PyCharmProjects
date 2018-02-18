@@ -303,7 +303,7 @@ def nextClosestTime(self, time):
         if all(map(check, time)):
             return time
 
-def longestUnivaluePath(self, root):
+def longestUnivaluePath(root):
         """
         :type root: TreeNode
         :rtype: int
@@ -329,3 +329,16 @@ def longestUnivaluePath(self, root):
         
         max_path(root)
         return self.len
+    
+from bisect import bisect_right
+def kEmptySlots(flowers, k):
+    blooming = []
+    for day, flower in enumerate(flowers):
+        insert_idx = bisect_right(blooming, flower)
+        blooming_slice = slice(insert_idx - (insert_idx > 0), insert_idx + 1)
+        neighborhood = blooming[blooming_slice]
+        for neighbor in neighborhood
+            if abs(neighbor - flower) - 1 == k:
+                return day
+            blooming.insert(insert_idx, flower)
+    return -1
