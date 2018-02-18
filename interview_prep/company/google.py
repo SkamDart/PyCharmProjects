@@ -272,3 +272,33 @@ def repeatedStringMatch(A, B):
             return append_count
         append_count += 1
         C += A
+
+def increment_time(self, time):
+    h, m = list(map(int, time.split(":")))
+    m = (m + 1) % 60
+    if m == 0:
+        h += 1
+        m = '00'
+
+    if m != '00' and m < 10:
+        m = '0' + str(m)
+
+    if h == 24:
+        h = '00'
+
+    if h != '00' and h < 10:
+        h = '0' + str(h)
+
+    return ':'.join(list(map(str, [h, m])))
+
+def nextClosestTime(self, time):
+    """
+    :type time: str
+    :rtype: str
+    """
+    nums = set(time)
+    check = lambda x: x in nums 
+    while True:
+        time = self.increment_time(time)
+        if all(map(check, time)):
+            return time
