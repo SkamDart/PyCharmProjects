@@ -302,3 +302,30 @@ def nextClosestTime(self, time):
         time = self.increment_time(time)
         if all(map(check, time)):
             return time
+
+def longestUnivaluePath(self, root):
+        """
+        :type root: TreeNode
+        :rtype: int
+        """
+        self.len = 0
+
+        def max_path(node):
+            if not node:
+                return 0
+
+            left = max_path(node.left)
+            right = max_path(node.right)
+            left_path = 0
+            right_path = 0
+            
+            if node.left and node.left.val == node.val:
+                left_path += (left + 1)
+            if node.right and node.right.val == node.val:
+                right_path += (right + 1) 
+
+            self.len = max(self.len, left_path + right_path)
+            return max(left_path, right_path)
+        
+        max_path(root)
+        return self.len
