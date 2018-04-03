@@ -8,6 +8,68 @@ def print_matrix(matrix):
     print("")
 
 class Solution:
+    def maxPoints(self, points):
+        """
+        https://leetcode.com/problems/max-points-on-a-line/description/
+        :type points: List[Point]
+        :rtype: interview
+        """
+        if len(points) <= 2:
+            return len(points)
+
+        from collections import defaultdict
+        N = len(points)
+        slope_count = defaultdict(int)
+        max_points = 0
+
+        for i in range(N):
+            
+            slope_count.clear()
+            cur_max = 0
+            duplicates = 0
+            base_pt = points[i]
+            x0, y0 = base_pt
+
+            for j in range(i + 1, N):
+                next_pt = points[j]
+                if next_pt == base_pt:
+                    duplicates += 1
+                else:
+                    x, y = next_pt
+                    slope = None if x - x0 == 0 else (y - y0) / (x - x0)
+                    slope_count[slope] += 1
+
+            max_points = max(max_points, max(slope_count, key=lambda x: x[1]), duplicates)
+        
+        return max_points
+    
+    def is_valid_time(self, time):
+        return True
+        lhs, rhs = time.split(":")
+        if int(lhs) > 23 or int(rhs) > 59:
+            return False
+        return True
+
+    def nextClosestTime(self, time):
+        """
+        https://leetcode.com/explore/interview/card/google/67/sql-2/471/
+        :type time: str
+        :rtype: str
+        """
+       # from itertools import combinations_with_replacement
+        from itertools import permutations
+        # get all numbers
+        nums = list(map(str, filter(lambda x: x != ':', list(time))))
+        # list of 4! permutations
+        # filter list
+        # calculate closest "time" difference
+        closest_time = None
+        for time in permutations(nums):
+            if self.is_valid_time(time):
+                time.insert()
+                print(time)
+        return closest_time
+
     def climbStairs(self, n):
         """
         https://leetcode.com/problems/climbing-stairs/description/
@@ -823,7 +885,7 @@ class Solution:
         """
 
 s = Solution()
-print(s.climbStairs(5))
+s.nextClosestTime("12:34")
 
 class ListNode:
     def __init__(self, x):
